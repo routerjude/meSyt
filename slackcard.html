@@ -1,0 +1,144 @@
+<!-- 
+Fix this Slack card up!
+
+1. The buttons are very blocky. Change the CSS so that they have rounded corners of 4px.
+2. There seems to be a typo in the top part of the card. I don't know what a 'Stufent' is, but that's probably not the word you want.
+3. The font for the buttons doesn't match the rest of the card. Find a way to make the font the same.
+4. We've provided a placeholder image for you. Set the placeholder as the background for the top of the card.
+5. Change the cursor to be a hand pointer instead of an arrow over the buttons.
+6. Have other ideas for how to change the card? Try them out! This is your workspace!
+FREECODECAMP.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Slacker Card</title>
+<!--   <script type="text/javascript">
+  function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+</script> -->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+  <meta name="udacity-grader" content="tests.json">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: #222;
+    }
+    .card {
+      height: 475px;
+      width: 325px;
+      box-shadow: 0px 5px 15px 0px rgba(153,153,153,0.5);
+      border-radius: 10px;
+      margin: auto;
+    }
+    .top {
+ /*     margin-left: 150px;
+      margin-right: 150px;
+      margin-top: 50px;
+      margin-bottom: 50px*/;
+      height: 55%;
+      width: 100%;
+      border-radius: 4px 4px 0px 0px;
+      border: 1px solid #ddd;
+      padding: 0px 20px;
+      font-family: Sylfaen;
+      background-image: url("pport.png");
+      position: relative;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: white;
+    }
+    .name {
+      padding-top: calc(475px * 0.40);
+      margin: 0px;
+      position: relative;
+
+    }
+    .status {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      margin-left: 4px;
+
+      border-radius: 5px;
+      background-color: #60D156;
+    }
+    .title {
+      margin-top: 8px;
+    }
+    .middle {
+      height: 5%;
+      border-left: 1px solid #ddd;
+      border-right: 1px solid #ddd;
+      padding: 0px 20px;
+      font-family: Dubai;
+
+    }
+    .time {
+      color: #444;
+      font-size: 10px;
+      padding-top: 0.2em;
+    }
+    .bottom {
+      height: 40%;
+      border-radius: 0px 0px 4px 4px;
+      border: 1px solid #ddd;
+      padding: 8px 16px;
+    }
+    .profile-action {
+      display: block;
+      width: 100%;
+      height: 32px;
+      font-size: 1em;
+      text-align: left;
+      font-family: Sylfaen;
+      /*padding: 0px 16px;*/
+      border: 0px;
+      background-color: white;
+    }
+    .profile-action:hover {
+      background-color: #00A5D2;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <div class="card">
+      <div class="top">
+        <h3 class="name">Jude Frank <span class="status"></span></h3>
+        <p class="title">Web Developer</p>
+      </div>
+      <div class="middle">
+        <div class="time">12:34 PM local time</div>
+      </div>
+      <div class="bottom">
+        <!-- See how the buttons all have the same CSS class?-->
+		<button class="profile-action">View preferences</button>
+        <button class="profile-action">Open account settings</button>
+        <button class="profile-action">Edit your profile</button>
+        <button class="profile-action">View your files</button>
+        <button class="profile-action">Connect with others</button>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
